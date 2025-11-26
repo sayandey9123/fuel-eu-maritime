@@ -1,4 +1,4 @@
-// src/core/ports/BankingRepository.ts
+
 
 import { BankEntry } from "../domain/banking";
 
