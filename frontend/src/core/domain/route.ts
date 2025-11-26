@@ -1,4 +1,4 @@
-// src/core/domain/route.ts
+
 
 export type VesselType = "Container" | "BulkCarrier" | "Tanker" | "RoRo";
 export type FuelType = "HFO" | "LNG" | "MGO";
