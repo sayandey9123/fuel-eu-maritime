@@ -1,4 +1,4 @@
-// src/adapters/inbound/http/routesController.ts
+
 
 import { Router, Request, Response } from 'express';
 import { RouteService } from '../../../core/application/routeUseCases';
@@ -6,7 +6,7 @@ import { RouteService } from '../../../core/application/routeUseCases';
 export function createRoutesRouter(routeService: RouteService): Router {
   const router = Router();
 
-  // GET /routes
+
   router.get('/', async (_req: Request, res: Response) => {
     try {
       const routes = await routeService.getRoutes();
@@ -16,7 +16,7 @@ export function createRoutesRouter(routeService: RouteService): Router {
     }
   });
 
-  // POST /routes/:id/baseline
+
   router.post('/:id/baseline', async (req: Request, res: Response) => {
     try {
       const id = Number(req.params.id);
@@ -31,7 +31,6 @@ export function createRoutesRouter(routeService: RouteService): Router {
     }
   });
 
-  // GET /routes/comparison
   router.get('/comparison/all', async (_req: Request, res: Response) => {
     try {
       const comparison = await routeService.getBaselineComparison();
