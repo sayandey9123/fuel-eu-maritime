@@ -1,4 +1,4 @@
-// src/adapters/inbound/http/bankingController.ts
+
 
 import { Router, Request, Response } from "express";
 import { BankingService } from "../../../core/application/bankingUseCases";
@@ -6,7 +6,7 @@ import { BankingService } from "../../../core/application/bankingUseCases";
 export function createBankingRouter(bankingService: BankingService): Router {
   const router = Router();
 
-  // GET /compliance/cb?shipId&year
+
   router.get("/cb", async (req: Request, res: Response) => {
     try {
       const { shipId, year, actualIntensity, fuelConsumption } = req.query;
@@ -28,7 +28,6 @@ export function createBankingRouter(bankingService: BankingService): Router {
     }
   });
 
-  // POST /banking/bank
   router.post("/bank", async (req: Request, res: Response) => {
     try {
       const { shipId, year } = req.body;
@@ -45,7 +44,6 @@ export function createBankingRouter(bankingService: BankingService): Router {
     }
   });
 
-  // POST /banking/apply
   router.post("/apply", async (req: Request, res: Response) => {
     try {
       const { shipId, year, amount } = req.body;
@@ -66,7 +64,7 @@ export function createBankingRouter(bankingService: BankingService): Router {
     }
   });
 
-  // GET /banking/records?shipId&year
+
   router.get("/records", async (req: Request, res: Response) => {
     try {
       const { shipId, year } = req.query;
