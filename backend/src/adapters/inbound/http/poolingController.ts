@@ -1,4 +1,4 @@
-// src/adapters/inbound/http/poolingController.ts
+
 
 import { Router, Request, Response } from "express";
 import { PoolingService } from "../../../core/application/poolingUseCases";
