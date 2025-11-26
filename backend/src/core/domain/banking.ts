@@ -1,4 +1,4 @@
-// src/core/domain/banking.ts
+
 
 export interface ComplianceRecord {
   shipId: string;
