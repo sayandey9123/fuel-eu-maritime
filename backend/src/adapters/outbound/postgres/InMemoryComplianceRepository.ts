@@ -1,4 +1,4 @@
-// src/adapters/outbound/postgres/InMemoryComplianceRepository.ts
+
 
 import { CompliancePort } from "../../../core/ports/CompliancePort";
 import { ComplianceRecord } from "../../../core/domain/banking";
