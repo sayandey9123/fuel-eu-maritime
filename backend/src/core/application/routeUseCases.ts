@@ -1,16 +1,16 @@
-// src/core/application/routeUseCases.ts
+.ts
 import { RouteRepository } from '../ports/RouteRepository';
 import { Route } from '../domain/route';
 
 export class RouteService {
   constructor(private readonly routeRepo: RouteRepository) {}
 
-  /** Get all routes */
+
   async getRoutes(): Promise<Route[]> {
     return this.routeRepo.getAllRoutes();
   }
 
-  /** Set a route as baseline */
+
   async setBaseline(id: number): Promise<void> {
     const route = await this.routeRepo.getRouteById(id);
     if (!route) {
@@ -20,7 +20,7 @@ export class RouteService {
     await this.routeRepo.setBaseline(id);
   }
 
-  /** Compute baseline vs comparison routes */
+
   async getBaselineComparison() {
     const all = await this.routeRepo.getAllRoutes();
     const baseline = all.find((r) => r.isBaseline);
