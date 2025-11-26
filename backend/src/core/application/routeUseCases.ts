@@ -1,4 +1,4 @@
-.ts
+
 import { RouteRepository } from '../ports/RouteRepository';
 import { Route } from '../domain/route';
 
