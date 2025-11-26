@@ -1,4 +1,4 @@
-// src/core/domain/pooling.ts
+
 
 export interface PoolMember {
   shipId: string;
