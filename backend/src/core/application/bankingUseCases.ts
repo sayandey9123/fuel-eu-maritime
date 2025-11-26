@@ -1,4 +1,4 @@
-// src/core/application/bankingUseCases.ts
+
 
 import { computeComplianceBalance } from "../domain/compliance";
 import { ComplianceRecord, BankEntry, ApplyBankRequest } from "../domain/banking";
@@ -11,9 +11,7 @@ export class BankingService {
     private bankingRepo: BankingRepository
   ) {}
 
-  /**
-   * Compute CB for a ship in a specific year.
-   */
+ 
   async computeCB(shipId: string, year: number, actualIntensity: number, fuelConsumption: number): Promise<ComplianceRecord> {
     const cb = computeComplianceBalance(actualIntensity, fuelConsumption);
 
@@ -23,9 +21,7 @@ export class BankingService {
     return record;
   }
 
-  /**
-   * Bank positive CB.
-   */
+ 
   async bankSurplus(shipId: string, year: number): Promise<BankEntry> {
     const record = await this.complianceRepo.getCompliance(shipId, year);
     if (!record) {
@@ -42,9 +38,7 @@ export class BankingService {
     return entry;
   }
 
-  /**
-   * Apply banked CB to cover a deficit.
-   */
+ 
   async applyBanked(request: ApplyBankRequest): Promise<{
     cb_before: number;
     applied: number;
