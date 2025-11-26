@@ -1,4 +1,4 @@
-// src/adapters/outbound/postgres/InMemoryBankingRepository.ts
+
 
 import { BankingRepository } from "../../../core/ports/BankingRepository";
 import { BankEntry } from "../../../core/domain/banking";
